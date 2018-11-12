@@ -1,0 +1,23 @@
+/* This is the unminified result of compiling main.scss into CSS */
+/* This file was manually copied from the target folder where the compiled files end up to serve as a learning tool*/
+
+#container span {
+  font-size:20px;
+  font-family: Open Sans, sans-serif;
+  -webkit-transform: rotate(10deg);
+  -ms-transform: rotate(10deg);
+  transform: rotate(10deg);
+  color: #f16830;
+  display: inline-block;
+  height: 200px;
+  text-align: center;
+  width: 37.5%
+}
+
+#container .other-element {
+  display: inline-block;
+  height: 200px;
+  width: 62.5%
+}
+
+/* If it doesn't make sense how this was produced from main.scss, go here: https://sass-lang.com/guide */

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>JavaScript Playground</title>
+    <base href="/" />
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Google Analytics here -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <div id="container">
+      <span>Some things to try:</span>
+      <div class="lists">
+        <ul class="list">
+          <li data-title="ternary">
+            <span>Ternary Operator</span>
+            <pre>var x = 1 === 2 ? 5 : 4;</pre>
+          </li>
+          <li data-title="active-element">
+            <span>Active Element</span>
+            <pre>var x = document.activeElement;</pre>
+          </li>
+          <li data-title="get-selection">
+            <span>Get Selection</span>
+            <pre>var x = getSelection();</pre>
+          </li>
+          <li>
+            <span>Some loop</span>
+            <pre>[1, 2, 3, 4, 5].some(function(number) {</pre>
+            <pre>  console.log(number);</pre>
+            <pre>  return number === 3;</pre>
+            <pre>}.bind(this));</pre>
+          </li>
+          <li>
+            <span>Map Function</span>
+            <pre>var x = [1, 2, 3, 4, 5].map(function(number) {</pre>
+            <pre>  return number;</pre>
+            <pre>}.bind(this));</pre>
+          </li>
+          <li data-title="for-each-loop">
+            <span>ForEach Loop</span>
+            <pre>[1, 2, 3, 4, 5].forEach(function(number) {</pre>
+            <pre>  console.log(number);</pre>
+            <pre>}.bind(this));</pre>
+          </li>
+          <li>
+            <span>Arrow Functions</span>
+            <pre>// Note this is the same as the code in the "ForEach Loop" section above</pre>
+            <pre>[1, 2, 3, 4, 5].forEach((number) => console.log(number));</pre>
+          </li>
+        </ul>
+        <ul class="list">
+          <li>
+            <span>Creating Promises</span>
+            <pre>var x = new Promise(function(resolve, reject) {</pre>
+            <pre>  var delay = 20000; // 20 seconds</pre>
+            <pre>  setTimeout(function() {</pre>
+            <pre>    resolve('Delay is up. I just resolved');</pre>
+            <pre>  }.bind(this), delay);</pre>
+            <pre>});</pre>
+          </li>
+          <li>
+            <span>Using Resolved Promises</span>
+            <pre>x.then(function(value) {</pre>
+            <pre>  console.log(value);</pre>
+            <pre>}.bind(this));</pre>
+          </li>
+          <li>
+            <span>"Or" Defaults</span>
+            <pre>var y;</pre>
+            <pre>var x = y || 2;</pre>
+          </li>
+          <li id="dataset-example" data-something="Hello">
+            <span>HTML 5 DataSet</span>
+            <pre>// Look in index.html to understand</pre>
+            <pre>var listItem = document.getElementById('dataset-example');</pre>
+            <pre>var x = listItem.dataset.something;</pre>
+          </li>
+          <li>
+            <span>QuerySelectorAll Function</span>
+            <pre>// Look in index.html to understand</pre>
+            <pre>var container = document.getElementById('container');</pre>
+            <pre>var x = container.querySelectorAll('li[data-title]');</pre>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="main.js"></script>
+  </body>
+</html>

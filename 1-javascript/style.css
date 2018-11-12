@@ -1,0 +1,21 @@
+html, body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+}
+
+span {
+  font-size: 16px;
+}
+
+pre {
+  font-size: 14px;
+}
+
+.lists {
+  display: flex;
+  justify-contents: center;
+}
+
+.list {
+  flex-grow: 1;
+}
