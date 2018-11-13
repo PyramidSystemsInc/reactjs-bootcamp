@@ -1,0 +1,25 @@
+html, body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+#container, .column {
+  height: 100%;
+  display: flex;
+}
+
+.column.red {
+  background-color: red;
+  flex-basis: 250px;
+}
+
+.column.green {
+  background-color: green;
+  flex-grow: 1;
+}
+
+.column.blue {
+  background-color: blue;
+  flex-basis: 800px;
+}

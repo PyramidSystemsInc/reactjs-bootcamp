@@ -1,0 +1,22 @@
+html, body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+#container {
+  align-items: center; /* Options: flex-start, center, flex-end */
+  display: flex;
+  height: 100%;
+  justify-content: center; /* Options: flex-start, center, flex-end, space-evenly, space-between, space-around */
+}
+
+.box {
+  display: inline-block;
+  height: 250px;
+  width: 250px;
+}
+
+.box.blue {
+  background-color: blue;
+}
