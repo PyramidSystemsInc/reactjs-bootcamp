@@ -1,0 +1,21 @@
+@import 'color-palette';
+@import 'extensions';
+@import 'mixins';
+
+#container {
+  span {
+    @extend %text; /* See extensions.scss */
+    @include transform(rotate(10deg)); /* See mixins.scss */
+    color: $pyramid-primary; /* See color-palette.scss */
+    display: inline-block;
+    height: 200px;
+    text-align: center;
+    width: 360px / 960px * 100%; /* Equates to 37.5% */
+  }
+
+  .other-element {
+    display: inline-block;
+    height: 200px;
+    width: 600px / 960px * 100%; /* Equates to 62.5% */
+  }
+}
