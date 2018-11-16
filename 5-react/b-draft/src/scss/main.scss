@@ -1,0 +1,36 @@
+@import 'variables';
+
+html, body {
+  height: 100%;
+  font-family: $font;
+  font-size: $font-size;
+  margin: 0;
+  padding: 0;
+}
+
+#container {
+  display: flex;
+  height: 100%;
+}
+
+.app {
+  display: flex;
+  flex-basis: 0;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.main {
+  display: flex;
+  flex-grow: 1;
+  min-height: 500px;
+}
+
+.content {
+  flex-grow: 1;
+}
+
+.left-sidebar, .right-sidebar {
+  flex-basis: 0px;
+  transition: 0.4s;
+}
