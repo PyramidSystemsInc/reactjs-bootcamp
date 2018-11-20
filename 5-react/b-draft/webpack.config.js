@@ -46,7 +46,7 @@ module.exports = {
         ]
       }))
     }, {
-      test: /\.(png|gif|jpg|jpeg|svg|xml|json)$/,
+      test: /\.(png|gif|jpg|jpeg|svg|xml)$/,
       use: [ 'url-loader' ]
     }, {
       test: /\.js$/,
@@ -68,6 +68,6 @@ module.exports = {
       from: 'src/assets/',
       to: path.join(__dirname, 'dist')
     }]),
-    new ExtractTextPlugin('style.css')
+    new ExtractTextPlugin('styles.css')
   ]
 };

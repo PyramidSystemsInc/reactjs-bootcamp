@@ -1,0 +1,34 @@
+[
+  {
+    "color": "#4285f4",
+    "dividerAfter": true,
+    "icon": "pie_chart",
+    "iconType": "material",
+    "pageName": "Chart",
+    "path": "/chart"
+  },
+  {
+    "color": "#4aa956",
+    "dividerAfter": false,
+    "icon": "assignment",
+    "iconType": "material",
+    "pageName": "Log",
+    "path": "/log"
+  },
+  {
+    "color": "#7b62b6",
+    "dividerAfter": true,
+    "icon": "edit",
+    "iconType": "material",
+    "pageName": "Edit",
+    "path": "/edit"
+  },
+  {
+    "color": "#616161",
+    "dividerAfter": false,
+    "icon": "settings",
+    "iconType": "material",
+    "pageName": "Settings",
+    "path": "/settings"
+  }
+]

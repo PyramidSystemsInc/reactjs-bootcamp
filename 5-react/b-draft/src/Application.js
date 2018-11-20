@@ -3,10 +3,9 @@ import ReactDOM from 'react-dom';
 import { renderRoutes } from 'react-router-config';
 import { BrowserRouter as Router, Switch } from 'react-router-dom';
 import { hot } from 'react-hot-loader';
-import routes from './routes';
+import routes from './routes/routes';
 import Header from './components/Header/Header';
-import Footer from './components/Footer/Footer';
-import Alert from '@jeff.diederiks/pyramid-react';
+import Sidebar from './components/Sidebar/Sidebar';
 import '@jeff.diederiks/pyramid-react/styles.css';
 import './scss/main.scss';
 
@@ -21,15 +20,11 @@ class Application extends React.Component {
         <div className="app">
           <Header />
           <main className="main">
+            <Sidebar />
             <div className="content">
-              <Alert
-                heading={'Something You SHould know!'}
-                message={'Something happened. Everything is awesome'}
-                type={'information'}
-              />
+              <Switch>{renderRoutes(routes)}</Switch>
             </div>
           </main>
-          <Footer />
         </div>
       </Router>
     );
@@ -38,7 +33,3 @@ class Application extends React.Component {
 
 ReactDOM.render(<Application />, document.getElementById('container'));
 export default hot(module)(Application);
-
-/*
-              <Switch>{renderRoutes(routes)}</Switch>
-*/
