@@ -12,15 +12,21 @@ import './scss/main.scss';
 class Application extends React.Component {
   constructor(props) {
     super(props);
+    this.setHeaderRef = this.setHeaderRef.bind(this);
+    this.setSidebarRef = this.setSidebarRef.bind(this);
+    this.state = {
+      header: undefined,
+      sidebar: undefined
+    }
   }
 
   render() {
     return (
       <Router>
         <div className="app">
-          <Header />
+          <Header header={this.setHeaderRef} sidebar={this.state.sidebar} />
           <main className="main">
-            <Sidebar />
+            <Sidebar sidebar={this.setSidebarRef} header={this.state.header} />
             <div className="content">
               <Switch>{renderRoutes(routes)}</Switch>
             </div>
@@ -28,6 +34,18 @@ class Application extends React.Component {
         </div>
       </Router>
     );
+  }
+
+  setHeaderRef(ref) {
+    this.setState({
+      header: ref
+    });
+  }
+
+  setSidebarRef(ref) {
+    this.setState({
+      sidebar: ref
+    });
   }
 }
 

@@ -6,8 +6,7 @@ import './button.scss';
 class Button extends React.Component {
   constructor(props) {
     super(props);
-    this.changeHeaderColor = this.changeHeaderColor.bind(this);
-    this.changeHeaderPageTitle = this.changeHeaderPageTitle.bind(this);
+    this.changeHeaderAppearance = this.changeHeaderAppearance.bind(this);
     this.onClickButton = this.onClickButton.bind(this);
   }
 
@@ -23,18 +22,15 @@ class Button extends React.Component {
   }
 
   onClickButton() {
-    this.changeHeaderColor();
-    this.changeHeaderPageTitle();
+    this.changeHeaderAppearance();
   }
 
-  changeHeaderColor() {
-    var header = document.getElementById('header');
-    header.style.backgroundColor = this.props.color;
-  }
-
-  changeHeaderPageTitle() {
-    var pageTitle = document.getElementById('header-page-title');
-    pageTitle.innerHTML = this.props.text;
+  changeHeaderAppearance() {
+    var header = this.props.header;
+    header.setState({
+      color: this.props.color,
+      pageTitle: this.props.text
+    });
   }
 }
 
