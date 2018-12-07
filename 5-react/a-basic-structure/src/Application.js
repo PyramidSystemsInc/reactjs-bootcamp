@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Text from './components/Text/Text';
-import './scss/main.scss';
+import './main.scss';
 
 class Application extends React.Component {
   render() {

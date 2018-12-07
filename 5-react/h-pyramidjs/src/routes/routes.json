@@ -1,0 +1,10 @@
+[
+  {
+    "color": "#4285f4",
+    "dividerAfter": true,
+    "icon": "home",
+    "iconType": "material",
+    "pageTitle": "Home",
+    "path": "/home"
+  }
+]
