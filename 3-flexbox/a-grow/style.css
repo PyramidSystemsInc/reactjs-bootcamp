@@ -9,6 +9,8 @@ html, body {
   display: flex;
 }
 
+/* Change the flex-grow number below to change the relative size of each box */
+
 .column.red {
   background-color: red;
   flex-grow: 1;

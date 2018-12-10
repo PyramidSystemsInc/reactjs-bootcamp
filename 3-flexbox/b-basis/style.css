@@ -9,6 +9,9 @@ html, body {
   display: flex;
 }
 
+/* Use flex-basis when you want to give something a set width in pixels */
+/* After flex-basis is done assigning space, flex-grow assigns what is left */
+
 .column.red {
   background-color: red;
   flex-basis: 250px;

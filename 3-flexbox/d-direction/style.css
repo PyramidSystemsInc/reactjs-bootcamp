@@ -4,6 +4,8 @@ html, body {
   margin: 0;
 }
 
+/* directions available: "row" (default) and "column" */
+
 #container, .column {
   height: 100%;
   display: flex;
