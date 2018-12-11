@@ -1,12 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { renderRoutes } from 'react-router-config';
-import { BrowserRouter as Router, Switch } from 'react-router-dom';
 import { hot } from 'react-hot-loader';
-import routes from './routes/routes';
 import Header from './components/Header/Header';
+import Home from './components/pages/Home/Home';
 import Sidebar from './components/Sidebar/Sidebar';
-import '@jeff.diederiks/pyramid-react/styles.css';
 import './scss/main.scss';
 
 class Application extends React.Component {
@@ -20,17 +17,15 @@ class Application extends React.Component {
 
   render() {
     return (
-      <Router>
-        <div className="app">
-          <Header sidebar={this.state.sidebar} />
-          <main className="main">
-            <Sidebar sidebar={this.setSidebarRef} />
-            <div className="content">
-              <Switch>{renderRoutes(routes)}</Switch>
-            </div>
-          </main>
-        </div>
-      </Router>
+      <div className="app">
+        <Header sidebar={this.state.sidebar} />
+        <main className="main">
+          <Sidebar sidebar={this.setSidebarRef} />
+          <div className="content">
+            <Home />
+          </div>
+        </main>
+      </div>
     );
   }
 

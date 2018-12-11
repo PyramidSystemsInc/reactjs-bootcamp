@@ -1,7 +1,6 @@
 import React from 'react';
 import { hot } from 'react-hot-loader';
 import Button from './parts/Button/Button';
-import * as routeData from '../../routes/routes.json';
 import './sidebar.scss';
 
 class Sidebar extends React.Component {
@@ -28,17 +27,18 @@ class Sidebar extends React.Component {
 
   render() {
     var classSpec = this.createClassSpec();
+    var homeRoute = {
+      color: 'blue',
+      pageTitle: 'Home',
+      iconType: 'material',
+      icon: 'home',
+      path: '/'
+    };
     return (
       <div className={classSpec.sidebar} ref={this.sidebar}>
-        {
-          routeData.default.map(function(route, key) {
-            return (
-              <div className="sidebar-element" key={key}>
-                <Button route={route} />
-              </div>
-            )
-          }.bind(this))
-        }
+        <div className="sidebar-element">
+          <Button route={homeRoute} />
+        </div>
       </div>
     );
   }

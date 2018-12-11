@@ -1,6 +1,5 @@
 import React from 'react';
 import { hot } from 'react-hot-loader';
-import * as routeData from '../../routes/routes.json';
 import './header.scss';
 
 class Header extends React.Component {
@@ -53,17 +52,13 @@ class Header extends React.Component {
   }
 
   findMatchingRoute() {
-    var pathName = location.pathname;
-    if (pathName === '/') {
-      return routeData.default[0];
-    }
-    var matchingRoute;
-    routeData.default.forEach(function(route) {
-      if (route.path === pathName) {
-        matchingRoute = route;
+    if (location.pathname === '/' || location.pathname === '/home') {
+      return {
+        color: 'blue',
+        pageTitle: 'Home',
+        path: '/'
       }
-    }.bind(this));
-    return matchingRoute;
+    }
   }
 
   getPageTitle(matchingRoute) {

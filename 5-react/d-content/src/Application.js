@@ -2,8 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { hot } from 'react-hot-loader';
 import Header from './components/Header/Header';
-import Home from './components/pages/Home/Home';
-import Sidebar from './components/Sidebar/Sidebar';
 import './scss/main.scss';
 
 class Application extends React.Component {
@@ -16,10 +14,7 @@ class Application extends React.Component {
       <div className="app">
         <Header />
         <main className="main">
-          <Sidebar />
-          <div className="content">
-            <Home />
-          </div>
+          <div className="content" />
         </main>
       </div>
     );

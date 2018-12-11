@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { hot } from 'react-hot-loader';
 import './button.scss';
 
@@ -13,7 +12,7 @@ class Button extends React.Component {
   render() {
     var route = this.props.route;
     return (
-      <Link className="sidebar-button-component" to={route.path}>
+      <a className="sidebar-button-component" href={route.path}>
         <div className="button">
           {this.renderIcon()}
           <span className="text">{route.pageTitle}</span>
@@ -22,7 +21,7 @@ class Button extends React.Component {
           route.dividerAfter &&
           <span className="divider"></span>
         }
-      </Link>
+      </a>
     );
   }
 
